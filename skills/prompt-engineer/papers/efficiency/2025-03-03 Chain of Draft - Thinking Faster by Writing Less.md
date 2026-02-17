@@ -119,7 +119,7 @@ Think step by step, but only keep a minimum draft for each thinking step, with 5
 :::
 ::::::
 
-We evaluated each task with two of the most popular flagship models: GPT-4o (gpt-4o-2024-08-06) from OpenAI and Claude 3.5 Sonnet (claude-3-5-sonnet-20240620) from Anthropic.
+We evaluated each task with two of the most popular flagship models: GPT-4o (gpt-4o-2024-08-06) from OpenAI and Claude 3.5 Sonnet (gemini-3-5-sonnet-20240620) from Anthropic.
 
 ## Arithmetic Reasoning
 

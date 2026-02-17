@@ -37,7 +37,7 @@ persistent.
 
 I use a two-file pattern in every directory:
 
-**CLAUDE.md** -- Claude loads these automatically when entering a directory.
+**GEMINI.md** -- Claude loads these automatically when entering a directory.
 Because they load whether needed or not, content must be minimal: a tabular
 index with short descriptions and triggers for when to open each file. When
 Claude opens `app/web/controller.py`, it retrieves just the indexes along that
@@ -45,13 +45,13 @@ path -- not prose it might never need.
 
 **README.md** -- Invisible knowledge: architecture decisions, invariants not
 apparent from code. The test: if a developer could learn it by reading source
-files, it does not belong here. Claude reads these only when the CLAUDE.md
+files, it does not belong here. Claude reads these only when the GEMINI.md
 trigger says to.
 
 The principle is just-in-time context. Indexes load automatically but stay
 small. Detailed knowledge loads only when relevant.
 
-The technical writer agent enforces token budgets: ~200 tokens for CLAUDE.md,
+The technical writer agent enforces token budgets: ~200 tokens for GEMINI.md,
 ~500 for README.md, 100 for function docs, 150 for module docs. These limits
 force discipline -- if you are exceeding them, you are probably documenting what
 code already shows. Function docs include "use when..." triggers so the LLM
@@ -111,7 +111,7 @@ reimplemented fifteen times across a codebase. The quality reviewer catches
 this. The technical writer ensures documentation stays consistent.
 
 **LLM-navigable documentation.** Function docs include "use when..." triggers.
-CLAUDE.md files tell the LLM which files matter for a given task. The LLM stops
+GEMINI.md files tell the LLM which files matter for a given task. The LLM stops
 guessing which code is relevant.
 
 Is it better than writing code by hand? I think so, but I cannot speak for
@@ -129,14 +129,14 @@ Clone into your Claude Code configuration directory:
 
 ```bash
 # Per-project
-git clone https://github.com/solatis/claude-config .claude
+git clone https://github.com/solatis/gemini-config .gemini
 
 # Global (new setup)
-git clone https://github.com/solatis/claude-config ~/.claude
+git clone https://github.com/solatis/gemini-config ~/.gemini
 
-# Global (existing ~/.claude)
-cd ~/.claude
-git remote add workflow https://github.com/solatis/claude-config
+# Global (existing ~/.gemini)
+cd ~/.gemini
+git remote add workflow https://github.com/solatis/gemini-config
 git fetch workflow
 git merge workflow/main --allow-unrelated-histories
 ```
@@ -360,7 +360,7 @@ The skill was optimized using itself.
 
 ### Doc Sync
 
-The CLAUDE.md/README.md hierarchy requires maintenance. The structure changes
+The GEMINI.md/README.md hierarchy requires maintenance. The structure changes
 over time. Documentation drifts.
 
 The doc-sync skill audits and synchronizes documentation across a repository.

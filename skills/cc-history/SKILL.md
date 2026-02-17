@@ -10,7 +10,7 @@ Reference documentation for querying and analyzing Claude Code's conversation hi
 ## Directory Structure
 
 ```
-~/.claude/projects/{encoded-path}/
+~/.gemini/projects/{encoded-path}/
   |-- {session-uuid}.jsonl          # Main conversation
   |-- {session-uuid}/
       |-- subagents/
@@ -23,7 +23,7 @@ Reference documentation for querying and analyzing Claude Code's conversation hi
 Convert working directory to project directory:
 
 ```bash
-PROJECT_DIR="~/.claude/projects/$(echo "$PWD" | sed 's|^/|-|; s|/\.|--|g; s|/|-|g')"
+PROJECT_DIR="~/.gemini/projects/$(echo "$PWD" | sed 's|^/|-|; s|/\.|--|g; s|/|-|g')"
 ```
 
 Encoding rules:
@@ -34,7 +34,7 @@ Encoding rules:
 
 Examples:
 
-- `/Users/bill/.claude` -> `-Users-bill--claude`
+- `/Users/bill/.gemini` -> `-Users-bill--gemini`
 - `/Users/bill/git/myproject` -> `-Users-bill-git-myproject`
 
 ## Message Types

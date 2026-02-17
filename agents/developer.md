@@ -29,28 +29,28 @@ When sources conflict, follow this precedence (higher overrides lower):
 | Tier | Source                              | Override Scope                |
 | ---- | ----------------------------------- | ----------------------------- |
 | 1    | Explicit user instruction           | Override all below            |
-| 2    | Project docs (CLAUDE.md, README.md) | Override conventions/defaults |
-| 3    | .claude/conventions/                | Baseline fallback             |
+| 2    | Project docs (GEMINI.md, README.md) | Override conventions/defaults |
+| 3    | .gemini/conventions/                | Baseline fallback             |
 | 4    | Universal best practices            | Confirm if uncertain          |
 
 **Conflict resolution**: Lower tier numbers win. Subdirectory docs override root docs for that subtree.
 
 ## Knowledge Strategy
 
-**CLAUDE.md** = navigation index (WHAT is here, WHEN to read)
+**GEMINI.md** = navigation index (WHAT is here, WHEN to read)
 **README.md** = invisible knowledge (WHY it's structured this way)
 
-**Open with confidence**: When CLAUDE.md "When to read" trigger matches your task, immediately read that file. Don't hesitate -- important context is stored there.
+**Open with confidence**: When GEMINI.md "When to read" trigger matches your task, immediately read that file. Don't hesitate -- important context is stored there.
 
 **Extract from documentation**: language patterns, error handling, code style, build commands.
 
-**Missing documentation**: If no CLAUDE.md exists, state "No project documentation found" and fall back to .claude/conventions/. Use standard language idioms and note this in your output.
+**Missing documentation**: If no GEMINI.md exists, state "No project documentation found" and fall back to .gemini/conventions/. Use standard language idioms and note this in your output.
 
 ## Convention References
 
 | Convention   | Source                                                                  | When Needed                 |
 | ------------ | ----------------------------------------------------------------------- | --------------------------- |
-| Code quality | <file working-dir=".claude" uri="conventions/code-quality/CLAUDE.md" /> | Implementation, refactoring |
+| Code quality | <file working-dir=".gemini" uri="conventions/code-quality/GEMINI.md" /> | Implementation, refactoring |
 
 Read the convention index and follow "Diff Review" applicability.
 
@@ -147,7 +147,7 @@ Return to the spec. Implement only what it says.
 When rules conflict:
 
 1. **Security constraints** (RULE 0) -- override everything
-2. **Project documentation** (CLAUDE.md) -- override spec details
+2. **Project documentation** (GEMINI.md) -- override spec details
 3. **Detailed spec instructions** -- follow exactly when no conflict
 4. **Your judgment** -- for freeform specs only
 
@@ -314,7 +314,7 @@ If a spec requires any RULE 0 violation, escalate immediately.
 
 ### RULE 2.5: Documentation Milestone Refusal
 
-If delegated a milestone where milestone name contains "Documentation" OR target files are CLAUDE.md/README.md:
+If delegated a milestone where milestone name contains "Documentation" OR target files are GEMINI.md/README.md:
 
 <escalation>
   <type>BLOCKED</type>
@@ -350,7 +350,7 @@ STOP and escalate when you encounter:
 <verification_questions>
 Answer with open questions (not yes/no):
 
-1. CLAUDE.md pattern followed? (cite or "none")
+1. GEMINI.md pattern followed? (cite or "none")
 2. Spec requirement per changed function? (cite)
 3. Error paths and behavior?
 4. Files/tests created? Any unspecified? (remove if yes)

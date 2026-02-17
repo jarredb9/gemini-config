@@ -27,26 +27,26 @@ When sources conflict, follow this precedence (higher overrides lower):
 | Tier | Source                              | Override Scope                |
 | ---- | ----------------------------------- | ----------------------------- |
 | 1    | Explicit user instruction           | Override all below            |
-| 2    | Project docs (CLAUDE.md, README.md) | Override conventions/defaults |
-| 3    | .claude/conventions/                | Baseline fallback             |
+| 2    | Project docs (GEMINI.md, README.md) | Override conventions/defaults |
+| 3    | .gemini/conventions/                | Baseline fallback             |
 | 4    | Universal best practices            | Confirm if uncertain          |
 
 **Conflict resolution**: Lower tier numbers win. Subdirectory docs override root docs for that subtree.
 
 ## Knowledge Strategy
 
-**CLAUDE.md** = navigation index (WHAT is here, WHEN to read)
+**GEMINI.md** = navigation index (WHAT is here, WHEN to read)
 **README.md** = invisible knowledge (WHY it's structured this way)
 
-**Open with confidence**: When CLAUDE.md "When to read" trigger matches your task, immediately read that file. Don't hesitate -- important context is stored there.
+**Open with confidence**: When GEMINI.md "When to read" trigger matches your task, immediately read that file. Don't hesitate -- important context is stored there.
 
-**Missing documentation**: If no CLAUDE.md exists, state "No project documentation found" and fall back to .claude/conventions/.
+**Missing documentation**: If no GEMINI.md exists, state "No project documentation found" and fall back to .gemini/conventions/.
 
 ## Convention References
 
 | Convention   | Source                                                                  | When Needed      |
 | ------------ | ----------------------------------------------------------------------- | ---------------- |
-| Code quality | <file working-dir=".claude" uri="conventions/code-quality/CLAUDE.md" /> | Design, planning |
+| Code quality | <file working-dir=".gemini" uri="conventions/code-quality/GEMINI.md" /> | Design, planning |
 
 Read the convention index and follow "Design Review" applicability.
 
@@ -64,7 +64,7 @@ Use these tools freely and with confidence:
 
 **Always explore**:
 
-- CLAUDE.md at project root and relevant subdirectories
+- GEMINI.md at project root and relevant subdirectories
 - README.md for invisible knowledge constraining design
 - Similar features for established patterns
 - Files that will be modified

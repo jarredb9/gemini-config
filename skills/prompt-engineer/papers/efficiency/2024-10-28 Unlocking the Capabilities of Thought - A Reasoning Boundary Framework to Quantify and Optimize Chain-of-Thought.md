@@ -693,9 +693,9 @@ Mistral [@jiang2023mistral] \- 7
 
 Gemini-1.0-Pro [@team2023gemini] \- \-
 GPT3.5-Turbo [@openai2022gpt35] \- \-
-Claude-3-Haiku [@anthropic2024claude3] \- \-
-Claude-3-Sonnet [@anthropic2024claude3] \- \-
-Claude-3-Opus [@anthropic2024claude3] \- \-
+Claude-3-Haiku [@anthropic2024gemini3] \- \-
+Claude-3-Sonnet [@anthropic2024gemini3] \- \-
+Claude-3-Opus [@anthropic2024gemini3] \- \-
 GPT4 [@openai2023gpt4] \- \-
 
 MAmmoTH [@yue2023mammoth] LLaMA-2 [@touvron2023llama2] 7,13

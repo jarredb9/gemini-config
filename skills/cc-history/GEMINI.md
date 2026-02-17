@@ -13,5 +13,5 @@ Reference documentation for analyzing Claude Code conversation history files.
 
 | Directory                 | What                         | When to read                   |
 | ------------------------- | ---------------------------- | ------------------------------ |
-| `~/.claude/projects/`     | Conversation history storage | Querying actual history files  |
-| `~/.claude/settings.json` | Claude Code configuration    | Understanding project settings |
+| `~/.gemini/projects/`     | Conversation history storage | Querying actual history files  |
+| `~/.gemini/settings.json` | Claude Code configuration    | Understanding project settings |

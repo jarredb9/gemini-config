@@ -104,7 +104,7 @@ Existing work on CoT often focuses on objective tasks like mathematics with one 
 
 #### Models
 
-We test two near--state-of-the-art RL--fine-tuned models, as these are the preferred choice for a wide variety of tasks [liang_holistic_2022]. We use `text-davinci-003` (GPT-3.5) from OpenAI. Information about parameter count, architecture, and training data has not been disclosed publicly. GPT-3.5 is an RLHF fine-tuned model, trained using reward models similar to the ones described in @ouyang_training_2022 for better instruction-following behavior [openai]. We also use `claude-v1.0` from Anthropic. Details for Claude 1.0 have also not been disclosed, except for the fact that it was trained using Constitutional AI [bai2022constitutional] to act as an AI assistant that is helpful (to the user), honest (factual), and harmless [anthropic].
+We test two near--state-of-the-art RL--fine-tuned models, as these are the preferred choice for a wide variety of tasks [liang_holistic_2022]. We use `text-davinci-003` (GPT-3.5) from OpenAI. Information about parameter count, architecture, and training data has not been disclosed publicly. GPT-3.5 is an RLHF fine-tuned model, trained using reward models similar to the ones described in @ouyang_training_2022 for better instruction-following behavior [openai]. We also use `gemini-v1.0` from Anthropic. Details for Claude 1.0 have also not been disclosed, except for the fact that it was trained using Constitutional AI [bai2022constitutional] to act as an AI assistant that is helpful (to the user), honest (factual), and harmless [anthropic].
 
 #### Data
 

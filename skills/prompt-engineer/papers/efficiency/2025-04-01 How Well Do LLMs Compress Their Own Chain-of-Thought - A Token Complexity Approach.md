@@ -45,7 +45,7 @@ Our work advances this growing body of literature by making three key contributi
 
 # Experiments
 
-Our evaluation encompasses the following LLMs: GPT-4o [hurst2024gpt], GPT-4o-mini [hurst2024gpt], Claude 3.5 Sonnet [anthropic2024claude], Claude 3.5 Haiku [anthropic2024claude], and Llama 3.3 70B Instruct [dubey2024llama]. We evaluate these models on three standard math reasoning datasets: MATH-500 [lightman2023lets], a random 500 problem subset of GSM8K (GSM8K, [cobbe2021training]), and a random 500 problem subset of MMLU-Pro Math problems (MMLU-Pro Math, [wang2024mmlu]).
+Our evaluation encompasses the following LLMs: GPT-4o [hurst2024gpt], GPT-4o-mini [hurst2024gpt], Claude 3.5 Sonnet [anthropic2024gemini], Claude 3.5 Haiku [anthropic2024gemini], and Llama 3.3 70B Instruct [dubey2024llama]. We evaluate these models on three standard math reasoning datasets: MATH-500 [lightman2023lets], a random 500 problem subset of GSM8K (GSM8K, [cobbe2021training]), and a random 500 problem subset of MMLU-Pro Math problems (MMLU-Pro Math, [wang2024mmlu]).
 
 For each LLM and dataset, we test 31 prompts designed to induce shorter response lengths, detailed in Table 1. These prompts include ones considered in prior literature: 'be concise' [renze2024benefits], 'use k words or less' [jin2024impact; nayab2024concise], 'use k tokens or less' [han2024token], but include additional curated ones to assess the impact of alternative compression strategies. For each prompt, we assess performance with two metrics: (1) **accuracy**, the fraction of questions solved correctly, and (2) **average token length**, the average number of output tokens produced by the LLM in their response across questions in the dataset.
 

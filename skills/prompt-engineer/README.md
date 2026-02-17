@@ -34,7 +34,7 @@ Optimize a sub-agent:
 
 ```
 Use your prompt engineer skill to optimize the system prompt for
-the following claude code sub-agent: agents/developer.md
+the following gemini code sub-agent: agents/developer.md
 ```
 
 Optimize a multi-prompt workflow:

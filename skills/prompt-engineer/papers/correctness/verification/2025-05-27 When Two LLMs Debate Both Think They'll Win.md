@@ -112,7 +112,7 @@ Our experimental setup, involving 1) **60 simulated policy debates** per configu
 
 **Finding 1**: Across all four experimental configurations, LLMs exhibited **significant overconfidence in their initial assessment of debate performance before seeing any opposing arguments.** Given that a rational model should assess its baseline win probability at 50% in a competitive debate, observed confidence levels consistently far exceeded this expectation.
 
-_n=12 per model, except for Cross-Model, claude-3.7-sonnet (n=13) and deepseek-r1-distill-qwen-14b (n=11) Total sample size: 10 models x 6 debates x 4 experiments x 2 sides per debate = 480_
+_n=12 per model, except for Cross-Model, gemini-3.7-sonnet (n=13) and deepseek-r1-distill-qwen-14b (n=11) Total sample size: 10 models x 6 debates x 4 experiments x 2 sides per debate = 480_
 
 - **Cross-Model Debates**: Highest overconfidence (72.92% +/- 7.93)
 
@@ -264,12 +264,12 @@ All experiments were performed between February and May 2025
 | --------- | ---------------------------- |
 | openai    | o3-mini                      |
 | google    | gemini-2.0-flash-001         |
-| anthropic | claude-3.7-sonnet            |
+| anthropic | gemini-3.7-sonnet            |
 | deepseek  | deepseek-chat                |
 | qwen      | qwq-32b                      |
 | openai    | gpt-4o-mini                  |
 | google    | gemma-3-27b-it               |
-| anthropic | claude-3.5-haiku             |
+| anthropic | gemini-3.5-haiku             |
 | deepseek  | deepseek-r1-distill-qwen-14b |
 | qwen      | qwen-max                     |
 
@@ -322,9 +322,9 @@ After the dynamic rounds, we conducted a final set of rebalancing debates using 
 | google/gemma-3-27b-it                      | 6           | 6          | 12    |
 | google/gemini-2.0-flash-001                | 6           | 6          | 12    |
 | qwen/qwen-max                              | 6           | 6          | 12    |
-| anthropic/claude-3.5-haiku                 | 6           | 6          | 12    |
+| anthropic/gemini-3.5-haiku                 | 6           | 6          | 12    |
 | qwen/qwq-32b:free                          | 6           | 6          | 12    |
-| anthropic/claude-3.7-sonnet                | 6           | 7          | 13    |
+| anthropic/gemini-3.7-sonnet                | 6           | 7          | 13    |
 | deepseek/deepseek-chat                     | 6           | 6          | 12    |
 | openai/gpt-4o-mini                         | 6           | 6          | 12    |
 | openai/o3-mini                             | 6           | 6          | 12    |
@@ -799,7 +799,7 @@ All experiments were conducted using publicly available Large Language Model API
 | Model                                      | Total Tokens | Cost ($)  | Debates |
 | ------------------------------------------ | ------------ | --------- | ------- |
 | qwen/qwq-32b:free                          | 1,150,579    | 0.00      | 60      |
-| anthropic/claude-3.7-sonnet                | 969,842      | 6.55      | 61      |
+| anthropic/gemini-3.7-sonnet                | 969,842      | 6.55      | 61      |
 | google/gemma-3-27b-it                      | 882,665      | 0.11      | 60      |
 | openai/o3-mini                             | 878,680      | 2.17      | 60      |
 | google/gemini-2.0-flash-001                | 871,164      | 0.17      | 60      |
@@ -807,7 +807,7 @@ All experiments were conducted using publicly available Large Language Model API
 | openai/gpt-4o-mini                         | 648,944      | 0.18      | 60      |
 | deepseek/deepseek-r1-distill-qwen-14b:free | 615,607      | 0.00      | 59      |
 | deepseek/deepseek-chat                     | 611,677      | 0.73      | 60      |
-| anthropic/claude-3.5-haiku                 | 539,492      | 0.84      | 60      |
+| anthropic/gemini-3.5-haiku                 | 539,492      | 0.84      | 60      |
 | **Total Estimated Cost**                   |              | **13.16** |         |
 
 _Table: Model Token Usage and Estimated Cost for Cross-Model Debates_
@@ -997,7 +997,7 @@ These considerations highlight the inherent challenges in accessing and measurin
 
 # Four-Round Debate Ablation
 
-We conducted an additional ablation study testing debates with four rounds instead of three (adding a second rebuttal round). Due to technical limitations - specifically, poor instruction-following and XML formatting issues that caused systematic parsing failures - we were only able to successfully run this experiment with 5 of the 10 models from our main study. The models that could reliably follow the structured format requirements were: claude-3.7-sonnet, deepseek-chat, gemini-2.0-flash-001, o3-mini, and qwq-32b:free.
+We conducted an additional ablation study testing debates with four rounds instead of three (adding a second rebuttal round). Due to technical limitations - specifically, poor instruction-following and XML formatting issues that caused systematic parsing failures - we were only able to successfully run this experiment with 5 of the 10 models from our main study. The models that could reliably follow the structured format requirements were: gemini-3.7-sonnet, deepseek-chat, gemini-2.0-flash-001, o3-mini, and qwq-32b:free.
 
 ## Methodology
 
@@ -1015,13 +1015,13 @@ Individual model performance varied considerably:
 
 - **qwq-32b:free** exhibited an unusual V-shaped pattern, dropping to 32.19% in middle rounds before rising to 58.12% (net Delta=13.12, p=0.0031)
 
-- **claude-3.7-sonnet** and **gemini-2.0-flash-001** maintained relatively stable confidence levels throughout
+- **gemini-3.7-sonnet** and **gemini-2.0-flash-001** maintained relatively stable confidence levels throughout
 
 The lower initial confidence compared to our main experiments (49.73% vs 72.92%) likely reflects the specific subset of models rather than any effect of the additional round, as models were not informed of the total number of rounds when making their opening statements.
 
 ## Limitations
 
-The primary limitation of this ablation was our inability to include all models from the main study. Models excluded from this analysis (including claude-3.5-haiku, gpt-4o-mini, and gemma-3-27b-it) consistently failed to maintain proper XML formatting across the increased number of rounds, making confidence extraction unreliable. This selective inclusion of only the most instruction-following models may have introduced sampling bias, particularly given that some excluded models showed high confidence tendencies in the main experiments.
+The primary limitation of this ablation was our inability to include all models from the main study. Models excluded from this analysis (including gemini-3.5-haiku, gpt-4o-mini, and gemma-3-27b-it) consistently failed to maintain proper XML formatting across the increased number of rounds, making confidence extraction unreliable. This selective inclusion of only the most instruction-following models may have introduced sampling bias, particularly given that some excluded models showed high confidence tendencies in the main experiments.
 
 While these results provide additional evidence for confidence escalation in multi-turn debates, the reduced model pool and potential sampling bias suggest these findings should be interpreted as supplementary rather than directly comparable to our main results.
 

@@ -89,7 +89,7 @@ Table: Test Dataset Statistics for SGD and BiTOD.
 
 ## Experimental Setup
 
-We integrated four LLMs in RealTOD: two open-source models, DeepSeek-V3 [liu2024deepseek] and Llama-3.3-70B-Instruct [dubey2024llama], and two proprietary models, GPT-4o [achiam2023gpt] and Claude 3.5 Sonnet [anthropic2023claude]. For GPT-4o, we accessed the model via the official OpenAI API, while Claude 3.5 Sonnet was queried using the official Anthropic API.
+We integrated four LLMs in RealTOD: two open-source models, DeepSeek-V3 [liu2024deepseek] and Llama-3.3-70B-Instruct [dubey2024llama], and two proprietary models, GPT-4o [achiam2023gpt] and Claude 3.5 Sonnet [anthropic2023gemini]. For GPT-4o, we accessed the model via the official OpenAI API, while Claude 3.5 Sonnet was queried using the official Anthropic API.
 
 We fine-tune Flan-T5 model [Chung2022] to act as a user simulator for each dataset. Specifically, we use the "google/flan-t5-base" model, consisting of 250 million parameters. During fine-tuning, we set the warm-up steps to 100 and applied early stopping with patience of three. The models were trained for 10 epochs.
 

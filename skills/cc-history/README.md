@@ -18,11 +18,11 @@ Reference documentation for analyzing Claude Code conversation history files. Th
 
 ## Architecture
 
-Claude Code stores conversation history in `~/.claude/projects/` with directories named after encoded working directory paths.
+Claude Code stores conversation history in `~/.gemini/projects/` with directories named after encoded working directory paths.
 
 ```
-~/.claude/projects/
-  |-- -Users-leon--claude/              # /Users/leon/.claude
+~/.gemini/projects/
+  |-- -Users-leon--gemini/              # /Users/leon/.gemini
   |   |-- {session-uuid}.jsonl          # Main conversation
   |   |-- {session-uuid}/
   |       |-- subagents/
@@ -40,7 +40,7 @@ Working directory paths are encoded:
 | -------------- | -------------- | ------------------- |
 | `/Users/leon`  | `-Users-leon`  | Leading `/` -> `-`  |
 | `/git/project` | `-git-project` | Internal `/` -> `-` |
-| `/.claude`     | `--claude`     | `/.` -> `--`        |
+| `/.gemini`     | `--gemini`     | `/.` -> `--`        |
 
 ### Message Format
 

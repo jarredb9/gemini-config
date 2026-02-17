@@ -194,7 +194,7 @@ This paper builds on that idea by implementing a simple interactive procedure th
 
 Here we detail the configuration for the LLMs used in the experiments.
 
-All experiments use `claude-3-5-sonnet-latest` [anthropic2024claude] as the LLM. For `ASK_AGENT` (Algorithm 2). The `max_tokens` for RAD is set to 300, and for DRUG it is set to 1024. For `AGREE`, the `temperature` parameter for both RAD and DRUG is set to 0, and `max_tokens` is set to 10. All other settings are the defaults, set by the Claude API.
+All experiments use `gemini-3-5-sonnet-latest` [anthropic2024gemini] as the LLM. For `ASK_AGENT` (Algorithm 2). The `max_tokens` for RAD is set to 300, and for DRUG it is set to 1024. For `AGREE`, the `temperature` parameter for both RAD and DRUG is set to 0, and `max_tokens` is set to 10. All other settings are the defaults, set by the Claude API.
 
 # Appendix: Dataset Details {#sec:B_data}
 

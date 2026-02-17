@@ -95,7 +95,7 @@ PREPROCESS_INSTRUCTIONS = (
     "```bash\n"
     "python3 << 'EOF'\n"
     "import sys\n"
-    "sys.path.insert(0, '/Users/lmergen/.claude/skills/scripts')\n"
+    "sys.path.insert(0, '/Users/lmergen/.gemini/skills/scripts')\n"
     "from skills.arxiv_to_md.tex_utils import preprocess_tex\n"
     "\n"
     "result = preprocess_tex('<source_dir>/<main_tex>')\n"

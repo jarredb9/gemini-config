@@ -43,7 +43,7 @@ class ImplDocsVerify(VerifyBase):
                 f"  Read plan.json for IK and modified files:",
                 f"    cat {state_dir}/plan.json | jq '{{ik: .invisible_knowledge, milestones: .milestones[].files}}'",
                 "",
-                "  Read CLAUDE.md and README.md files in modified directories.",
+                "  Read GEMINI.md and README.md files in modified directories.",
                 "",
             ])
         elif scope.startswith("directory:"):
@@ -51,7 +51,7 @@ class ImplDocsVerify(VerifyBase):
             guidance.extend([
                 f"DIRECTORY CHECK - Focus on {directory}:",
                 "",
-                f"  Read CLAUDE.md: cat {directory}/CLAUDE.md",
+                f"  Read GEMINI.md: cat {directory}/GEMINI.md",
                 f"  Read README.md: cat {directory}/README.md (if exists)",
                 "",
             ])
@@ -64,9 +64,9 @@ class ImplDocsVerify(VerifyBase):
             ])
 
         # Add check-specific guidance
-        if "claude.md" in check.lower() and "tabular" in check.lower():
+        if "GEMINI.md" in check.lower() and "tabular" in check.lower():
             guidance.extend([
-                "CLAUDE.MD FORMAT CHECK:",
+                "GEMINI.md FORMAT CHECK:",
                 "  Must use tabular index format:",
                 "  | File | Contents (WHAT) | Read When (WHEN) |",
                 "  | ---- | --------------- | ---------------- |",
@@ -77,17 +77,17 @@ class ImplDocsVerify(VerifyBase):
         elif "forbidden section" in check.lower():
             guidance.extend([
                 "FORBIDDEN SECTIONS CHECK:",
-                "  CLAUDE.md must NOT have:",
+                "  GEMINI.md must NOT have:",
                 "  - 'Key Invariants' section",
                 "  - 'Dependencies' section",
                 "  - 'Constraints' section",
-                "  These belong in README.md, not CLAUDE.md.",
+                "  These belong in README.md, not GEMINI.md.",
                 "",
             ])
         elif "overview" in check.lower() and "one sentence" in check.lower():
             guidance.extend([
                 "OVERVIEW LENGTH CHECK:",
-                "  CLAUDE.md overview must be ONE sentence max.",
+                "  GEMINI.md overview must be ONE sentence max.",
                 "  Count sentences in Overview section.",
                 "",
             ])

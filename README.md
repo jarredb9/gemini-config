@@ -1,3 +1,5 @@
+This project is a fork of https://github.com/solatis/claude-config that has been modified by me to conform to using Google's GEMINI instead of Claude.
+
 # My Gemini Code Workflow
 
 I use Gemini Code for most of my work. After months of iteration, I noticed a
@@ -129,14 +131,14 @@ Clone into your Gemini Code configuration directory:
 
 ```bash
 # Per-project
-git clone https://github.com/solatis/gemini-config .gemini
+git clone https://github.com/jarredb9/gemini-config .gemini
 
 # Global (new setup)
-git clone https://github.com/solatis/gemini-config ~/.gemini
+git clone https://github.com/jarredb9/gemini-config ~/.gemini
 
 # Global (existing ~/.gemini)
 cd ~/.gemini
-git remote add workflow https://github.com/solatis/gemini-config
+git remote add workflow https://github.com/jarredb9/gemini-config
 git fetch workflow
 git merge workflow/main --allow-unrelated-histories
 ```

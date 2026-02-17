@@ -1,11 +1,11 @@
 ---
 name: cc-history
-description: Reference documentation for analyzing Claude Code conversation history files
+description: Reference documentation for analyzing Gemini Code conversation history files
 ---
 
-# Claude Code History Analysis
+# Gemini Code History Analysis
 
-Reference documentation for querying and analyzing Claude Code's conversation history. Use shell commands and jq to extract information from JSONL conversation files.
+Reference documentation for querying and analyzing Gemini Code's conversation history. Use shell commands and jq to extract information from JSONL conversation files.
 
 ## Directory Structure
 

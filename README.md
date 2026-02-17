@@ -1,6 +1,6 @@
-# My Claude Code Workflow
+# My Gemini Code Workflow
 
-I use Claude Code for most of my work. After months of iteration, I noticed a
+I use Gemini Code for most of my work. After months of iteration, I noticed a
 pattern: LLM-assisted code rots faster than hand-written code. Technical debt
 accumulates because the LLM does not know what it does not know, and neither do
 you until it is too late.
@@ -37,15 +37,15 @@ persistent.
 
 I use a two-file pattern in every directory:
 
-**GEMINI.md** -- Claude loads these automatically when entering a directory.
+**GEMINI.md** -- Gemini loads these automatically when entering a directory.
 Because they load whether needed or not, content must be minimal: a tabular
 index with short descriptions and triggers for when to open each file. When
-Claude opens `app/web/controller.py`, it retrieves just the indexes along that
+Gemini opens `app/web/controller.py`, it retrieves just the indexes along that
 path -- not prose it might never need.
 
 **README.md** -- Invisible knowledge: architecture decisions, invariants not
 apparent from code. The test: if a developer could learn it by reading source
-files, it does not belong here. Claude reads these only when the GEMINI.md
+files, it does not belong here. Gemini reads these only when the GEMINI.md
 trigger says to.
 
 The principle is just-in-time context. Indexes load automatically but stay
@@ -96,7 +96,7 @@ routine work.
 
 I have not run formal benchmarks. I can only tell you what I have observed using
 this workflow to build and maintain non-trivial applications entirely with
-Claude Code -- backend systems, data pipelines, streaming applications in C++,
+Gemini Code -- backend systems, data pipelines, streaming applications in C++,
 Python, and Go.
 
 The problems I used to hit constantly are gone:
@@ -125,7 +125,7 @@ approach, give it a shot. I would like to hear what works and what does not.
 
 ## Quick Start
 
-Clone into your Claude Code configuration directory:
+Clone into your Gemini Code configuration directory:
 
 ```bash
 # Per-project

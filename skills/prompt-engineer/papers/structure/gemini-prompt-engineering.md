@@ -1,4 +1,4 @@
-# Claude Prompt Engineering: Structure Techniques
+# Gemini Prompt Engineering: Structure Techniques
 
 **Source:** Anthropic Documentation (docs.anthropic.com)
 
@@ -6,12 +6,12 @@
 
 ## XML Tag Patterns
 
-XML tags serve three functions in Claude prompts: separation, reference, and
+XML tags serve three functions in Gemini prompts: separation, reference, and
 instruction.
 
 ### Separation
 
-Prevent Claude from conflating instructions with data by wrapping user content:
+Prevent Gemini from conflating instructions with data by wrapping user content:
 
 ```xml
 <data>{{RAW_INPUT}}</data>
@@ -51,7 +51,7 @@ User: Classify this feedback: {{TEXT}}
 Assistant: {"sentiment":"
 ```
 
-Claude continues from the prefill, maintaining the JSON structure. This
+Gemini continues from the prefill, maintaining the JSON structure. This
 eliminates "Here's my analysis:" preambles and forces immediate structured
 output.
 

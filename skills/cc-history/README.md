@@ -1,6 +1,6 @@
-# Claude Code History Analysis
+# Gemini Code History Analysis
 
-Reference documentation for analyzing Claude Code conversation history files. This skill provides query patterns and structural knowledge for extracting insights from JSONL conversation logs.
+Reference documentation for analyzing Gemini Code conversation history files. This skill provides query patterns and structural knowledge for extracting insights from JSONL conversation logs.
 
 ## When to Use
 
@@ -18,7 +18,7 @@ Reference documentation for analyzing Claude Code conversation history files. Th
 
 ## Architecture
 
-Claude Code stores conversation history in `~/.gemini/projects/` with directories named after encoded working directory paths.
+Gemini Code stores conversation history in `~/.gemini/projects/` with directories named after encoded working directory paths.
 
 ```
 ~/.gemini/projects/

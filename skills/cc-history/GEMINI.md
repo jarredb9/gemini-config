@@ -1,6 +1,6 @@
 # cc-history/
 
-Reference documentation for analyzing Claude Code conversation history files.
+Reference documentation for analyzing Gemini Code conversation history files.
 
 ## Files
 
@@ -14,4 +14,4 @@ Reference documentation for analyzing Claude Code conversation history files.
 | Directory                 | What                         | When to read                   |
 | ------------------------- | ---------------------------- | ------------------------------ |
 | `~/.gemini/projects/`     | Conversation history storage | Querying actual history files  |
-| `~/.gemini/settings.json` | Claude Code configuration    | Understanding project settings |
+| `~/.gemini/settings.json` | Gemini Code configuration    | Understanding project settings |

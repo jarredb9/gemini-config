@@ -1,4 +1,4 @@
-# Claude Prompt Engineering: Long Context Handling
+# Gemini Prompt Engineering: Long Context Handling
 
 **Source:** Anthropic Documentation (docs.anthropic.com)
 
@@ -55,7 +55,7 @@ This grounding step:
 
 ## Why This Works
 
-Claude's attention mechanism processes context sequentially. Placing documents
+Gemini's attention mechanism processes context sequentially. Placing documents
 first allows the model to:
 
 1. Build internal representations of document content
